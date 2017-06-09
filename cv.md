@@ -30,4 +30,4 @@ Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelut
 
 ---
 
-Some more details regarding projects I've worked on are available on the [About](http://aays.github.io/about) page as well as on my [LinkedIn](https://www.linkedin.com/in/ahmedrhasan/).
+Some more details regarding projects I've worked on are available on the [About](/about) page as well as on my [LinkedIn](https://www.linkedin.com/in/ahmedrhasan/).
