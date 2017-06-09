@@ -11,10 +11,10 @@ For those times when having only one data frame just doesn't cut the cheese.
 
 My own work in genomics often involves working with datasets on the scale of
 entire chromosomes, and rarely am I working with just one at a time. This results in
-me having to work on several highly similar datasets at once that more or less exhibit 
+me having to work in parallel on several highly similar datasets that more or less exhibit 
 the exact same structure.
 
-The intuitive solution may be to write a script to be run in the command
+The intuitive approach may be to write a script to be run in the command
 line, taking in one dataset at a time and performing analyses as directed. This also makes it easy to exploit bash tools (such as `parallel`) and is probably the better long-term solution for its sheer scalability.
 
 So then why might we want to work with lists of data frames in a single script/environment?
@@ -22,13 +22,13 @@ Well, a number of reasons:
 
 1. Exploratory work in RStudio/a Jupyter Notebook, for instance, when testing elements of what may become a command line-ready script - but not wanting to do so with just one dataset;
 2. Writing a single-input script that involves splitting a dataset at some point (bit of a weird reason, frankly, but do you);
-3. Performing comparative analyses between multiple datasets in a quick and inherently 'parallel'<sup>[[1](#footnote1)]</sup> way.
+3. Performing comparative analyses between multiple datasets in a quick and inherently parallel<sup>[[1](#footnote1)]</sup> way.
 
 ## `lapply` - Introduction
 
 The entire process of working with a list of data frames ultimately hinges on one elegant function - `lapply`. `lapply` will take in a vector<sup>[[2](#footnote2)]</sup> or list, perform a specified operation on it, and return the modified version as a list. Here's a reasonably straightforward example with some code:
 
-```
+```r
 > ones <- list(1,2,3,4)
 > exponentials <- lapply(ones, exp) # e^x for each element in our list
 > exponentials
@@ -47,7 +47,7 @@ The entire process of working with a list of data frames ultimately hinges on on
 
 It's also possible to define 'quick and dirty' functions within the body of `lapply` itself:
 
-```
+```r
 > ones <- c(1,2,3,4)
 > twos <- lapply(ones, function(x) x*2)
 > twos
@@ -63,7 +63,7 @@ It's also possible to define 'quick and dirty' functions within the body of `lap
 
 Finally, custom defined functions also work just fine:
 
-```
+```r
 > twoandone <- function(x){
 	  out <- x*2 + 1
 	  return(out)
@@ -89,14 +89,14 @@ This is where things get interesting. Think about it - virtually any function yo
 
 But before we even get started on the possibilities that allows, we can actually use `lapply` itself to create our list of data frames in the first place. Let's make some sample data:
 
-```
+```r
 > data1 <- data.frame(first = c(1:5), second = c(2:6))
 > data2 <- data.frame(first = c(3:7), second = c(4:8))
 ```
 
 Now, assuming our dfs are named in a consistent way that allows for [globbing](https://en.wikipedia.org/wiki/Glob_(programming)), we can instantiate `ls()` with `get` to bring them together into a list:
 
-```
+```r
 > ls()
 [1] "data1" "data2"
 > dflist <- lapply(ls(pattern = 'data*'), get)
@@ -119,7 +119,7 @@ Now, assuming our dfs are named in a consistent way that allows for [globbing](h
 
 And now any work you'd like to do on one df can be done at both at once, solely by sticking your function of choice into `lapply` instead of running it in the command line as is. For instance:
 
-```
+```r
 > lapply(dflist, dim)
 [[1]]
 [1] 5 2
@@ -135,7 +135,7 @@ And now any work you'd like to do on one df can be done at both at once, solely 
 
 This synergizes beautifully with tidyverse operations too, of course:
 
-```
+```r
 > library(tidyverse)
 > lapply(dflist, function(df) mutate(df, third = second * first))
 [[1]]  
@@ -156,7 +156,7 @@ This synergizes beautifully with tidyverse operations too, of course:
 
 Of course, remember that `lapply` is not an inplace function! The original list is not modified unless the `lapply` function is assigned back to it.
 
-```
+```r
 > lapply(dflist, function(df) mutate(df, third = second * first))
 [[1]]  
   first second third
@@ -208,13 +208,15 @@ Of course, remember that `lapply` is not an inplace function! The original list 
 
 ```
 
-One last thing remains: sometimes (and especially with larger lists of data frames) it can be hard to keep track of them all, and it doesn't help that `lapply` has a tendency to remove a data frame's name when it's been pulled into a list. This can be quickly corrected using `names`, however:
+One last thing remains: sometimes (and especially with larger lists) it can be hard to keep track of which data frame is which, and it doesn't help that `lapply` has a tendency to remove a data frame's name when it's been pulled into a list. This can be quickly corrected using `names`, however:
 
-	> names(dflist) <- c('data1', 'data2')
-
-Furthermore, if you used `ls` to glob data frames into a script, feeding the exact same pattern you used for the globbing into `names` will also do the trick:
-
+```r
+> names(dflist) <- c('data1', 'data2')
 ```
+
+Furthermore, if you used `ls` to glob data frames into a list, feeding the exact same pattern you used for the globbing into `names` will also do the trick:
+
+```r
 > dflist <- lapply(ls(pattern = 'data*'), get)
 > names(dflist) <- ls(pattern = 'data*')
 > dflist
@@ -237,7 +239,7 @@ $data2
 
 Enjoy!
 
-<a name="footnote1"><sup>1</sup></a> `lapply` is not internally parallelized in memory far as I know, even if it does constitute what's called an [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) function in terms of how it reads through the elements of a list. There are parallelized options for `lapply`-like work, such as those found in the `parallel` library, but those are outside the scope of this post (and probably a Google search away).
+<a name="footnote1"><sup>1</sup></a> `lapply` is not internally parallelized in memory far as I know, even if it does constitute what's called an [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) function in terms of how it reads through the elements of a list. There are parallelized options for `lapply`-like work, such as those found in R's `parallel` library, but those are outside the scope of this post (and probably a Google search away).
 
 <a name="footnote2"><sup>2</sup></a> While `lapply` can take in either a list or a vector as input, it will _always_ return a list, while keeping the object types of said list's elements intact. 
 
