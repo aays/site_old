@@ -5,6 +5,8 @@ date: 2017-08-01
 tags: bash
 ---
 
+A simple function to automatically append info about deleted files to a cleanup log!
+
 ### Motivation
 
 (I originally wanted to just tweet this little trick out, but 140 characters is rarely sufficient for this sort of thing.)
