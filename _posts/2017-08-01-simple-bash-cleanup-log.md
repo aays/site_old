@@ -67,7 +67,7 @@ From there on out, just use `rml` in place of `rm` to log a file's deletion. For
 rml projectdir/bigintermediatefile.txt
 ```
 
-Will add something like this to `cleanup.log`:
+Will automatically add something like this to `cleanup.log`:
 
 ```
 Tue Aug  1 12:09:01 EDT 2017
