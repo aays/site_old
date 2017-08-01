@@ -11,9 +11,9 @@ A simple function to automatically append info about deleted files to a cleanup 
 
 (I originally wanted to just tweet this little trick out, but 140 characters is rarely sufficient for this sort of thing.)
 
-Anyhow - sometimes, when dealing with large amounts of intermediate files in a project, it can be useful to log what's being deleted when and where. Here's a quick bash trick for setting up a function that logs a) which files where deleted, b) when they were deleted, and c) how much space was freed up.
+Anyhow - sometimes, when dealing with large amounts of intermediate files in a project, it can be useful to log what's being deleted when and where. Here's a quick bash trick for setting up a function that logs a) which files where deleted, b) when they were deleted, and c) how much space was freed up as a consequence.
 
-I'm sure there are more elegant ways to do this, but this has worked for me thus far!
+I'm sure there are more elegant ways to do this, but this has worked well for me thus far!
 
 ### Method
 
