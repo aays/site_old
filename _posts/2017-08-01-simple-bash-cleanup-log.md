@@ -29,7 +29,7 @@ Next, we'll open up our `.bash_profile` in order to create our function.
 vi ~/.bash_profile
 ```
 
-Here's the template for my function, which I call `rml()` ('remove and log'). Paste the following anywhere within the body of your `.bash_profile`.
+Here's the template for my function, which I call `rml()` ('remove and log'). Paste the following anywhere within the body of your `.bash_profile`. Make sure to use the full path to your `cleanup.log` file from the root dir.
 
 ```sh
 rml () {
