@@ -50,7 +50,7 @@ Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelut
 
 ### Workshops
 
-- Intro to R ([STEM Fellowship Big Data Challenge 2017](https://bigdatachallenge.github.io)) - 05/2017 ([Video]((https://www.youtube.com/watch?v=z_irkhAErvc)))
+- Intro to R ([STEM Fellowship Big Data Challenge 2017](https://bigdatachallenge.github.io)) - 05/2017 ([Video](https://www.youtube.com/watch?v=z_irkhAErvc))
 - Intermediate Topics in Python ([UofT Coders](uoftcoders.github.io)) - 04/2017 ([Video](https://www.youtube.com/watch?v=33Pgx0DlNmo))
 - Data wrangling with `dplyr` and `magrittr` ([UofT Coders](uoftcoders.github.io)) - 07/2017 ([Video](https://www.youtube.com/watch?v=qO4ZXzyiulM))
 
