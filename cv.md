@@ -34,7 +34,7 @@ Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelut
 
 ### Research
 
-**Hasan A**, Ness RW. Recombination rate variation and leaky organelle inheritance in _Chlamydomonas reinhardtii_. Midwest PopGen 2017 @ Michigan State University, East Lansing, MI.
+- **Hasan A**, Ness RW. Recombination rate variation and leaky organelle inheritance in _Chlamydomonas reinhardtii_. [Midwest PopGen 2017](https://midwestpopgen.wordpress.com/2017/05/02/midwest-popgen-2017-michigan-state-university/) @ Michigan State University, East Lansing, MI.
 
 ### Other
 
