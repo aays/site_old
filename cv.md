@@ -30,15 +30,29 @@ Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelut
 
 **Hasan A**, Chen A, Gupta N, Glowinsky R. (2016) The U.K.’s commitment to fostering growth via education: a compliance assessment. In 2015 G7 Schloss Elmau Summit Final Compliance Report. Toronto: G8 Research Group. pp. 16-17. [Available online](http://www.g8.utoronto.ca/evaluations/2015compliance-final/index.html).
 
-### Workshops/Presentations
+### Talks/Presentations
 
-- [Intro to R](https://www.youtube.com/watch?v=z_irkhAErvc) (STEM Fellowship Big Data Challenge 2017) - 05/2017
+#### Research
+
+**Hasan A**, Ness RW. Recombination rate variation and leaky organelle inheritance in _Chlamydomonas reinhardtii_. Midwest PopGen 2017 @ Michigan State University, East Lansing, MI.
+
+#### Other
+
 - [A New Generation of Data-Native Learners](https://www.youtube.com/watch?v=yhOrvPaNqRY) (Civic Tech Toronto) - 12/2016
 - [Fetching Data with the Altmetric API](https://www.youtube.com/watch?v=k981sK4ODWI) (STEM Fellowship Big Data Challenge 2016-2017) - 10/2016
 
-#### With [UofT Coders](uoftcoders.github.io)
-- [Intermediate Topics in Python](https://www.youtube.com/watch?v=33Pgx0DlNmo&t=1419s) - 04/2017
-- [Data wrangling with `dplyr` and `magrittr`](https://www.youtube.com/watch?v=qO4ZXzyiulM) - 07/2017
+### Teaching
+
+#### TA Experience
+
+- Genomics ([BIO458H5S](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO458H5)) - Summer 2017 _(Course Development)_
+- Bioinformatics ([BIO362H5F](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO362H5)) - Fall 2017
+
+#### Workshops
+
+- [Intro to R](https://www.youtube.com/watch?v=z_irkhAErvc) - [STEM Fellowship Big Data Challenge 2017](https://bigdatachallenge.github.io) - 05/2017
+- [Intermediate Topics in Python](https://www.youtube.com/watch?v=33Pgx0DlNmo&t=1419s) - [UofT Coders](uoftcoders.github.io) - 04/2017
+- [Data wrangling with `dplyr` and `magrittr`](https://www.youtube.com/watch?v=qO4ZXzyiulM) - [UofT Coders](uoftcoders.github.io) - 07/2017
 
 ---
 
