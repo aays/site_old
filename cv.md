@@ -38,8 +38,8 @@ Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelut
 
 ### Other
 
-- [A New Generation of Data-Native Learners](https://www.youtube.com/watch?v=yhOrvPaNqRY) (Civic Tech Toronto) - 12/2016
-- [Fetching Data with the Altmetric API](https://www.youtube.com/watch?v=k981sK4ODWI) (STEM Fellowship Big Data Challenge 2016-2017) - 10/2016
+- A New Generation of Data-Native Learners ([Civic Tech Toronto](civictech.ca)) - 12/2016 ([Video](https://www.youtube.com/watch?v=yhOrvPaNqRY))
+- Fetching Data with the Altmetric API ([STEM Fellowship Big Data Challenge 2016-2017](stemfellowship.org/big-data-challenge)) - 10/2016 ([Video](https://www.youtube.com/watch?v=k981sK4ODWI))
 
 ## Teaching
 
@@ -50,9 +50,9 @@ Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelut
 
 ### Workshops
 
-- [Intro to R](https://www.youtube.com/watch?v=z_irkhAErvc) ([STEM Fellowship Big Data Challenge 2017](https://bigdatachallenge.github.io)) - 05/2017
-- [Intermediate Topics in Python](https://www.youtube.com/watch?v=33Pgx0DlNmo&t=1419s) ([UofT Coders](uoftcoders.github.io)) - 04/2017
-- [Data wrangling with `dplyr` and `magrittr`](https://www.youtube.com/watch?v=qO4ZXzyiulM) ([UofT Coders](uoftcoders.github.io)) - 07/2017
+- Intro to R ([STEM Fellowship Big Data Challenge 2017](https://bigdatachallenge.github.io)) - 05/2017 ([Video]((https://www.youtube.com/watch?v=z_irkhAErvc)))
+- Intermediate Topics in Python ([UofT Coders](uoftcoders.github.io)) - 04/2017 ([Video](https://www.youtube.com/watch?v=33Pgx0DlNmo))
+- Data wrangling with `dplyr` and `magrittr` ([UofT Coders](uoftcoders.github.io)) - 07/2017 ([Video](https://www.youtube.com/watch?v=qO4ZXzyiulM))
 
 ---
 
