@@ -45,8 +45,9 @@ Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelut
 
 ### TA Experience
 
-- Genomics ([BIO458H5S](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO458H5)) - Summer 2017 _(Course Development)_
+- Genomics ([BIO458H5S](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO458H5)) - Spring 2017
 - Bioinformatics ([BIO362H5F](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO362H5)) - Fall 2017
+- Genomics ([BIO458H5S](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO458H5)) - Summer 2017 _(Course Development)_
 
 ### Workshops
 
