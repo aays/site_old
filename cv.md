@@ -38,23 +38,29 @@ Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelut
 
 ### Other
 
-- A New Generation of Data-Native Learners ([Civic Tech Toronto](civictech.ca)) - 12/2016 ([Video](https://www.youtube.com/watch?v=yhOrvPaNqRY))
-- Fetching Data with the Altmetric API ([STEM Fellowship Big Data Challenge 2016-2017](stemfellowship.org/big-data-challenge)) - 10/2016 ([Video](https://www.youtube.com/watch?v=k981sK4ODWI))
+- A New Generation of Data-Native Learners 
+    - [Civic Tech Toronto](civictech.ca) - 12/2016 ([Video](https://www.youtube.com/watch?v=yhOrvPaNqRY))
+- Fetching Data with the Altmetric API 
+    - [STEM Fellowship Big Data Challenge 2016-2017](stemfellowship.org/big-data-challenge) - 10/2016 ([Video](https://www.youtube.com/watch?v=k981sK4ODWI))
 
 ## Teaching
 
 ### TA Experience
 
-- Genomics ([BIO458H5S](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO458H5)) - Spring 2017
+- Genomics ([BIO458H5S](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO458H5)) - Spring 2018
 - Bioinformatics ([BIO362H5F](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO362H5)) - Fall 2017
 - Genomics ([BIO458H5S](https://student.utm.utoronto.ca/calendar/course_detail.pl?Depart=3&Course=BIO458H5)) - Summer 2017 _(Course Development)_
 
 ### Workshops
 
-- Data wrangling with `dplyr` and `magrittr` ([UofT Coders](uoftcoders.github.io)) - 07/2017 ([Video](https://www.youtube.com/watch?v=qO4ZXzyiulM))
-- Intro to R ([STEM Fellowship Big Data Challenge 2017](https://bigdatachallenge.github.io)) - 05/2017 ([Video](https://www.youtube.com/watch?v=z_irkhAErvc))
-- Intermediate Topics in Python ([UofT Coders](uoftcoders.github.io)) - 04/2017 ([Video](https://www.youtube.com/watch?v=33Pgx0DlNmo))
-- Research: More Than Just a Plan B ([Operation Med School Toronto](http://operationmedschool.com/toronto/)/STEM Fellowship) - 03/2017
+- Data wrangling with `dplyr` and `magrittr`
+    -  [UofT Coders](uoftcoders.github.io) - 07/2017 ([Video](https://www.youtube.com/watch?v=qO4ZXzyiulM))
+- Intro to R 
+    - [STEM Fellowship Big Data Challenge 2017](https://bigdatachallenge.github.io) - 05/2017 ([Video](https://www.youtube.com/watch?v=z_irkhAErvc))
+- Intermediate Topics in Python
+    - [UofT Coders](uoftcoders.github.io) - 04/2017 ([Video](https://www.youtube.com/watch?v=33Pgx0DlNmo))
+- Research: More Than Just a Plan B 
+    - [Operation Med School Toronto](http://operationmedschool.com/toronto/)/STEM Fellowship - 03/2017
 
 
 ---
