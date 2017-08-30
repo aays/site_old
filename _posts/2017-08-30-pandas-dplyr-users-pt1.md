@@ -1,4 +1,9 @@
-# An introduction to `pandas` for bewildered `dplyr` users - Part 1
+---
+layout: post
+title: An introduction to `pandas` for bewildered `dplyr` users - Part 1
+date: 2017-08-30
+tags: R
+---
 
 Personally, it's a little hard to fathom what data frame operations were like before `dplyr` and the tidyverse came around<sup>[[1](#footnote1)]</sup>. An elegant and intuitive R toolkit for working with data frames, or table-formatted data objects, `dplyr` offers a frightening amount of utility with incredibly straightforward syntax. A lot of this elegance is owed to its seamless integration with the R pipe operator, or `%>%`, which facilitates the chaining together of operations for quick and efficient data frame manipulation.
 
