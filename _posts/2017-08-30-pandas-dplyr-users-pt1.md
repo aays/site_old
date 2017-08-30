@@ -19,7 +19,7 @@ This post here is my attempt to make some sense out of `pandas` operations in li
 
 <a name="footnote1"><sup>1</sup></a><font size="3"><i> Mind you, this is much more because of my own lack of formal training in programming than anything to do with the value of base R.</i></font>
 
-## Getting Started
+# Getting Started
 
 Like any good data frame-related tutorial would do, I figured the classic `iris` dataset would be a good environment for us to explore `pandas` in. Loading it into R is simple enough, given that it's a built-in dataset. Let's also get `dplyr` up and running.
 
@@ -53,13 +53,13 @@ iris = conversion.ri2py(R['iris'])
 
 Now, two things to note before we get started:
 1. Much like in `dplyr`, it appears a given operation on a `pandas` dataframe will _always_ return a new data frame object. That being said, multiple `pandas` functions do offer a boolean `inplace` argument if you'd like for an operation to modify an object as such. Frankly, I don't personally know enough about programming principles to know whether doing so is necessarily a better or worse approach - just go with whatever makes the code easiest to implement and read after the fact.
-2. As far as I know, `pandas` _has no pipe operator._ That's right -- I know that's a huge part of the intuitiveness of `dplyr` gone off the bat. There _is_ a semi-equivalent in the form of the `.pipe()` method but we'll get into why that doesn't function in exactly the same way. The `pandas` cheat sheet does recommend 'method chaining` as an option, which I will do a bit of here, but which I personally find to be not particularly conducive to easy reading. <sup>[[2](#footnote2)]</sup>
+2. As far as I know, `pandas` _has no pipe operator._ That's right -- I know that's a huge part of the intuitiveness of `dplyr` gone off the bat. There _is_ a semi-equivalent in the form of the `.pipe()` method, but we'll get into why that doesn't function in exactly the same way. The `pandas` cheat sheet does recommend 'method chaining` as an option, which I will do a bit of here, but which I personally find to be not particularly conducive to easy reading. <sup>[[2](#footnote2)]</sup>
 
 Onwards - let's start our discussion with some quick functions for describing our data frames.
 
-<a name="footnote2"><sup>2</sup></a><i><font size="3"> One [can apparently code a 'hack' pipe in Python](https://stackoverflow.com/questions/28252585/functional-pipes-in-python-like-from-dplyr) using the `infix` library, but I haven't done so myself and can't really comment on whether that's worth your time.</i></font>
+<a name="footnote2"><sup>2</sup></a><font size="3"> _One [can apparently code a 'hack' pipe in Python](https://stackoverflow.com/questions/28252585/functional-pipes-in-python-like-from-dplyr) using the_ `infix` _library, but I haven't done so myself and can't really comment on whether that's worth your time._</font>
 
-### Looking at our data
+# Looking at our data
 
 `head` -- the timeless convenience function that lets us check up on the first few rows of our data frame -- remains largely unchanged across both languages. The only difference is that it's a _function_ in R and a _class method_ in Python. 
 
@@ -104,15 +104,18 @@ iris.shape # note lack of parentheses
 ## (150, 5)
 ```
 
-Finally, before jumping into `dplyr` functions, we're going to rename the columns of our `pandas` data frame to eliminate the periods. This is because the period in Python is a means of denoting methods/attributes of an object: for instance, where `my.data` is a perfectly reasonable object name in R, Python will interpret that as 'return the `data` attribute of the object `my`'!. We can rename our columns by passing a dictionary object to the `.rename()` attribute: 
+Finally, before jumping into `dplyr` functions, we're going to rename the columns of our `pandas` data frame to eliminate the periods. This is because the period in Python is a means of denoting methods/attributes of an object: for instance, where `my.data` is a perfectly reasonable object name in R, Python will interpret that as 'return the `data` attribute of the object `my`'! We can rename our columns by passing a dictionary object to the `.rename()` attribute: 
 
 ```python
-iris = iris.rename(columns = {'Sepal.Length': 'Sepal_Length', 'Petal.Length': 'Petal_Length', 'Sepal.Width': 'Sepal_Width', 'Petal.Width': 'Petal_Width'})
+iris = iris.rename(columns = {'Sepal.Length': 'Sepal_Length', 
+'Petal.Length': 'Petal_Length', 
+'Sepal.Width': 'Sepal_Width', 
+'Petal.Width': 'Petal_Width'})
 ```
 
 Now for some actual `dplyr` functions!
 
-### `filter` - subsetting rows
+## `filter` - subsetting rows
 
 In `dplyr`, `filter` allows us to subset rows based on a condition. The syntax is quite straightforward:
 
@@ -196,9 +199,11 @@ iris[iris$Sepal.Length > 7, ]
 ```
 
 
-### A quick aside - what's in an index?
+## A quick aside - what's in an index?
 
-You may have noticed how in the above example, the indices of the R data frame have been reset following our usage of `filter`, but those of the `pandas` one haven't (same goes for the base R operation, but that's another conversation entirely). This can be an unexpected source of frustration more often than you might think, especially if you're performing operations involving repeated subsetting and indexing of data frames. To reset the index each time, simply take on the `.reset_index()` method at the end of a `pandas` operation. Careful, however - doing so will create a new column, simply called `index`, which will store all of the 'old' indices. That's probably something to watch out for if you're selecting columns by position and not name!
+You may have noticed how in the above example, the indices (on the left hand side) of the R data frame have been reset following our usage of `filter`, but those of the `pandas` one haven't (same goes for the base R operation, but that's another conversation entirely). This can be an unexpected source of frustration more often than you might think, especially if you're performing operations involving repeated subsetting and indexing of data frames. 
+
+To reset the index each time, simply take on the `.reset_index()` method at the end of a `pandas` operation. Careful, however - doing so will create a new column, simply called `index`, which will store all of the 'old' indices. That's probably something to watch out for if you're selecting columns by position and not name!
 
 ```python
 iris.query('Sepal_Length > 7').reset_index()
@@ -218,7 +223,7 @@ iris.query('Sepal_Length > 7').reset_index()
 ## 11    136           7.7          3.0           6.1          2.3  virginica
 ```
 
-### `select` - subsetting columns
+## `select` - subsetting columns
 
 `select` allows us to pull out columns by name. Further columns can simply be fed to `select` as further arguments. The `-` operator also lets us remove a column if we'd like, while the `:` operator allows us to select multiple consecutive columns.
 
@@ -305,9 +310,9 @@ iris.loc[range(3,6), 'Sepal_Length':'Petal_Length']
 ## 5           5.0          3.6           1.4
 ```
 
-### `arrange` - sort data (+ how to chain methods, aka _Ceci n'a pas une pipe_)
+## `arrange` - sort data (+ how to chain methods, aka _Ceci n'a pas une pipe_)
 
-As `dplyr` verbs go, `arrange` is quite self explanatory.
+`arrange` is, well, quite self explanatory.
 
 ```r
 iris %>%
@@ -359,4 +364,6 @@ Notice how we use `\` to continue code on new lines. As far as I know, this is t
 
 ---
 
-That's it for the first part here. In the second installment, I'll be going over how to use the `.pipe()` method (and why it's really not the best way to go a lot of the time...), `group_by`, `mutate`, `summarise`, and `sample_n`/`sample_frac`. A potential third installment might go beyond that and cover things like `.iterrows()` and other `pandas`-specific tools, but that depends on how far my own understanding of `pandas` manages to grow!
+That's it for the first part here! In the second installment, I'll be going over how to use the `.pipe()` method (and why it's really not the best way to go a lot of the time...), `group_by`, `mutate`, `summarise`, and `sample_n`/`sample_frac`. 
+
+A potential third installment might go beyond that and cover things like `.iterrows()` and other `pandas`-specific tools, but that depends on how far my own understanding of `pandas` manages to grow. Enjoy!
