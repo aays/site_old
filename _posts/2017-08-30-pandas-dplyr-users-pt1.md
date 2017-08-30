@@ -5,6 +5,10 @@ date: 2017-08-30
 tags: R
 ---
 
+Are you also a tidyverse user having a bit of trouble diving into `pandas`? Read on!
+
+---
+
 Personally, it's a little hard to fathom what data frame operations were like before `dplyr` and the tidyverse came around<sup>[[1](#footnote1)]</sup>. An elegant and intuitive R toolkit for working with data frames, or table-formatted data objects, `dplyr` offers a frightening amount of utility with incredibly straightforward syntax. A lot of this elegance is owed to its seamless integration with the R pipe operator, or `%>%`, which facilitates the chaining together of operations for quick and efficient data frame manipulation.
 
 Of course, the Python world has since noticed the awesome potential of data frames, and Python's lack of a native data frame object class eventually led to the development of `pandas`. Much like the tidyverse, `pandas` largely centers around working with `DataFrame` objects, and exhibits some clear parallels with its R equivalents. At the same time, its syntax does include many quirks that may be a little difficult for a native R user to wrap their head around -- perhaps partially because of the object-oriented nature of Python.
