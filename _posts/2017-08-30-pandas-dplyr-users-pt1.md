@@ -1,4 +1,4 @@
-### An introduction to `pandas` for bewildered `dplyr` users - Part 1
+# An introduction to `pandas` for bewildered `dplyr` users - Part 1
 
 Personally, it's a little hard to fathom what data frame operations were like before `dplyr` and the tidyverse came around. An elegant and intuitive R toolkit for working with data frames, or table-formatted data objects, `dplyr` offers a frightening amount of utility with incredibly straightforward syntax. A lot of this elegance is owed to its seamless integration with the R pipe operator, or `%>%`, which facilitates the chaining together of operations for quick and efficient data frame manipulation.
 
@@ -8,7 +8,7 @@ To be up front for a second here: I'm writing this post mostly for myself. I am 
 
 This post here is my attempt to make some sense out of `pandas` operations in light of my familiarity and comfort with the tidyverse, and `dplyr` in particular. I'm hoping that in explaining `pandas` within the context of some core `dplyr` verbs, it's perhaps even the tiniest bit easier for R users to wrap their heads around this nifty Python library. But remember: a little knowledge can go a long way!
 
-#### Getting Started
+## Getting Started
 
 Like any good data frame-related tutorial would do, I figured the classic `iris` dataset would be a good environment for us to explore `pandas` in. Loading it into R is simple enough, given that it's a built-in dataset. Let's also get `dplyr` up and running.
 
@@ -46,7 +46,7 @@ Now, two things to note before we get started:
 
 Onwards - let's start our discussion with some quick functions for describing our data frames.
 
-#### Looking at our data
+### Looking at our data
 
 `head`, the timeless convenience function for peeking at the top of our data frame, remains largely unchanged across both languages. The only difference is that it's a _function_ in R and a _class method_ in Python. 
 
@@ -99,7 +99,7 @@ iris = iris.rename(columns = {'Sepal.Length': 'Sepal_Length', 'Petal.Length': 'P
 
 Now for some actual `dplyr` functions!
 
-#### `filter` - subsetting rows
+### `filter` - subsetting rows
 
 In `dplyr`, `filter` allows us to subset rows based on a condition. The syntax is quite straightforward:
 
@@ -183,7 +183,7 @@ iris[iris$Sepal.Length > 7, ]
 ```
 
 
-##### A quick aside - what's in an index?
+### A quick aside - what's in an index?
 
 You may have noticed how in the above example, the indices of the R data frame have been reset following our usage of `filter`, but those of the `pandas` one haven't (same goes for the base R operation, but that's another conversation entirely). This can be an unexpected source of frustration more often than you might think, especially if you're performing operations involving repeated subsetting and indexing of data frames. To reset the index each time, simply take on the `.reset_index()` method at the end of a `pandas` operation. Careful, however - doing so will create a new column, simply called `index`, which will store all of the 'old' indices. That's probably something to watch out for if you're selecting columns by position and not name!
 
@@ -205,7 +205,7 @@ iris.query('Sepal_Length > 7').reset_index()
 ## 11    136           7.7          3.0           6.1          2.3  virginica
 ```
 
-#### `select` - subsetting columns
+### `select` - subsetting columns
 
 `select` allows us to pull out columns by name. Further columns can simply be fed to `select` as further arguments. The `-` operator also lets us remove a column if we'd like, while the `:` operator allows us to select multiple consecutive columns.
 
