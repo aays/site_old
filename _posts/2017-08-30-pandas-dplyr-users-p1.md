@@ -17,11 +17,11 @@ To be up front for a second here: I'm writing this post mostly for myself. I am 
 
 This post here is my attempt to make some sense out of `pandas` operations in light of my familiarity and comfort with the tidyverse, and `dplyr` in particular. I'm hoping that in explaining `pandas` within the context of some core `dplyr` verbs, it's perhaps even the tiniest bit easier for R users to wrap their heads around this nifty Python library. But remember: a little knowledge can go a long way!
 
-<a name="footnote1"><sup>1</sup></a><font size="3"><i> Mind you, this is much more because of my own lack of formal training in programming than anything to do with the value of base R.</i></font>
+<a name="footnote1"><sup>1</sup></a><font size="3"><i> Mind you, this owes much more to my own lack of formal training in programming than anything to do with the value of base R.</i></font>
 
 # Getting Started
 
-Like any good data frame-related tutorial would do, I figured the classic `iris` dataset would be a good environment for us to explore `pandas` in. Loading it into R is simple enough, given that it's a built-in dataset. Let's also get `dplyr` up and running.
+Like any good data frame-related tutorial, I figured the classic `iris` dataset would be a good environment for us to explore `pandas` in. Loading it into R is simple enough, given that it's a built-in dataset. Let's also get `dplyr` up and running.
 
 ```r
 library(dplyr)
@@ -38,7 +38,7 @@ iris = load_iris()
 iris = pd.DataFrame(iris.data, columns = iris.feature_names)
 ```
 
-If you don't have `scikit-learn` but do have `rpy2` installed (as is the case with our lab server) [the following code](https://stackoverflow.com/questions/28417293/sample-datasets-in-pandas) will do the trick instead. Don't bother trying to understand it if you don't already -- what's going on here is not super relevant for what we're actually talking about today anyways.
+If you don't have `scikit-learn` but do have `rpy2` installed (as is the case with our lab server, for some reason) [the following code](https://stackoverflow.com/questions/28417293/sample-datasets-in-pandas) will do the trick instead. Don't bother trying to understand it if you don't already -- what's going on here is not super relevant for what we're actually talking about today anyways.
 
 ```python
 import pandas as pd
@@ -57,7 +57,7 @@ Now, two things to note before we get started:
 
 Onwards - let's start our discussion with some quick functions for describing our data frames.
 
-<a name="footnote2"><sup>2</sup></a><font size="3"> _One [can apparently code a 'hack' pipe in Python](https://stackoverflow.com/questions/28252585/functional-pipes-in-python-like-from-dplyr) using the_ `infix` _library, but I haven't done so myself and can't really comment on whether that's worth your time._</font>
+<a name="footnote2"><sup>2</sup></a><font size="3"> <i>One [can apparently code a 'hack' pipe in Python](https://stackoverflow.com/questions/28252585/functional-pipes-in-python-like-from-dplyr) using the</i> `infix` <i>library, but I haven't done so myself and can't really comment on whether that's worth your time.</i></font>
 
 # Looking at our data
 
@@ -138,7 +138,7 @@ filter(iris, Sepal.Length > 7)
 ## 12          7.7         3.0          6.1         2.3 virginica
 ```
 
-`pandas` has two ways of doing this same operation.
+`pandas` provides two ways of doing this same operation.
 
 With the `.query()` method:
 ```python
@@ -203,7 +203,7 @@ iris[iris$Sepal.Length > 7, ]
 
 You may have noticed how in the above example, the indices (on the left hand side) of the R data frame have been reset following our usage of `filter`, but those of the `pandas` one haven't (same goes for the base R operation, but that's another conversation entirely). This can be an unexpected source of frustration more often than you might think, especially if you're performing operations involving repeated subsetting and indexing of data frames. 
 
-To reset the index each time, simply take on the `.reset_index()` method at the end of a `pandas` operation. Careful, however - doing so will create a new column, simply called `index`, which will store all of the 'old' indices. That's probably something to watch out for if you're selecting columns by position and not name!
+To reset the index each time, simply tack on the `.reset_index()` method at the end of a `pandas` operation. Careful, however - doing so will create a new column, simply called `index`, which will store all of the 'old' indices. That's probably something to watch out for if you're selecting columns by position and not name! That can be avoided by setting `drop = True` in `reset_index()`.
 
 ```python
 iris.query('Sepal_Length > 7').reset_index()
@@ -261,7 +261,8 @@ iris %>% select(Sepal.Length:Petal.Length) %>% head()
 
 This is where `pandas` diverges quite a bit, based on which of these operations we'd like to perform.
 
-Selecting one or more columns is done with double square brackets:
+Selecting one or more columns in `pandas` is done with double square brackets:
+
 ```python
 iris[['Sepal_Length', 'Species']]
 
@@ -275,6 +276,7 @@ iris[['Sepal_Length', 'Species']]
 ```
 
 But dropping columns necessitates providing a list of column names to the `.drop()` method:
+
 ```python
 iris.drop(['Species'], axis = 1)
 
@@ -312,7 +314,7 @@ iris.loc[range(3,6), 'Sepal_Length':'Petal_Length']
 
 ## `arrange` - sort data (+ how to chain methods, aka _Ceci n'a pas une pipe_)
 
-`arrange` is, well, quite self explanatory.
+`arrange` sorts the input data frame by the values in a given column. Here, we use it to sort our data by `Sepal.Length` following a bit of subsetting:
 
 ```r
 iris %>%
@@ -366,4 +368,4 @@ Notice how we use `\` to continue code on new lines. As far as I know, this is t
 
 That's it for the first part here! In the second installment, I'll be going over how to use the `.pipe()` method (and why it's really not the best way to go a lot of the time...), `group_by`, `mutate`, `summarise`, and `sample_n`/`sample_frac`. 
 
-A potential third installment might go beyond that and cover things like `.iterrows()` and other `pandas`-specific tools, but that depends on how far my own understanding of `pandas` manages to grow. Enjoy!
+A potential third installment might go beyond that and cover things like `.iterrows()` and other `pandas`-specific tools, but that depends on how far my own understanding of `pandas` manages to grow. Till next time!
