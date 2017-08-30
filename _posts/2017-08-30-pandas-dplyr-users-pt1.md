@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An introduction to `pandas` for bewildered `dplyr` users - Part 1
+title: An introduction to pandas for bewildered dplyr users - Part 1
 date: 2017-08-30
 tags: R
 ---
