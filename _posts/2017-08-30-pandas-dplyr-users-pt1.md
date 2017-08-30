@@ -9,7 +9,7 @@ Are you also a tidyverse user having a bit of trouble diving into `pandas`? Read
 
 ---
 
-Personally, it's a little hard to fathom what data frame operations were like before `dplyr` and the tidyverse came around<sup>[[1](#footnote1)]</sup>. An elegant and intuitive R toolkit for working with data frames, or table-formatted data objects, `dplyr` offers a frightening amount of utility with incredibly straightforward syntax. A lot of this elegance is owed to its seamless integration with the R pipe operator, or `%>%`, which facilitates the chaining together of operations for quick and efficient data frame manipulation.
+Personally, it's a little hard to fathom what data frame operations were like before `dplyr` and the tidyverse came around <sup>[[1](#footnote1)]</sup>. An elegant and intuitive R toolkit for working with data frames, or table-formatted data objects, `dplyr` offers a frightening amount of utility with incredibly straightforward syntax. A lot of this elegance is owed to its seamless integration with the R pipe operator, or `%>%`, which facilitates the chaining together of operations for quick and efficient data frame manipulation.
 
 Of course, the Python world has since noticed the awesome potential of data frames, and Python's lack of a native data frame object class eventually led to the development of `pandas`. Much like the tidyverse, `pandas` largely centers around working with `DataFrame` objects, and exhibits some clear parallels with its R equivalents. At the same time, its syntax does include many quirks that may be a little difficult for a native R user to wrap their head around -- perhaps partially because of the object-oriented nature of Python.
 
@@ -53,7 +53,7 @@ iris = conversion.ri2py(R['iris'])
 
 Now, two things to note before we get started:
 1. Much like in `dplyr`, it appears a given operation on a `pandas` dataframe will _always_ return a new data frame object. That being said, multiple `pandas` functions do offer a boolean `inplace` argument if you'd like for an operation to modify an object as such. Frankly, I don't personally know enough about programming principles to know whether doing so is necessarily a better or worse approach - just go with whatever makes the code easiest to implement and read after the fact.
-2. As far as I know, `pandas` _has no pipe operator._ That's right. I know that's a huge part of the intuitiveness of `dplyr` gone off the bat. There _is_ a semi-equivalent in the form of the `.pipe()` method but we'll get into why that doesn't function in exactly the same way. The `pandas` cheat sheet does recommend 'method chaining` as an option, which I will do a bit of here, but which I personally find to be not particularly conducive to easy reading.<sup>[[2](#footnote2)]</sup>
+2. As far as I know, `pandas` _has no pipe operator._ That's right. I know that's a huge part of the intuitiveness of `dplyr` gone off the bat. There _is_ a semi-equivalent in the form of the `.pipe()` method but we'll get into why that doesn't function in exactly the same way. The `pandas` cheat sheet does recommend 'method chaining` as an option, which I will do a bit of here, but which I personally find to be not particularly conducive to easy reading. <sup>[[2](#footnote2)]</sup>
 
 Onwards - let's start our discussion with some quick functions for describing our data frames.
 
