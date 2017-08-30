@@ -17,7 +17,7 @@ To be up front for a second here: I'm writing this post mostly for myself. I am 
 
 This post here is my attempt to make some sense out of `pandas` operations in light of my familiarity and comfort with the tidyverse, and `dplyr` in particular. I'm hoping that in explaining `pandas` within the context of some core `dplyr` verbs, it's perhaps even the tiniest bit easier for R users to wrap their heads around this nifty Python library. But remember: a little knowledge can go a long way!
 
-<a name="footnote1"><sup>1</sup></a><font size="2"><i> Mind you, this is much more because of my own lack of formal training in programming than anything to do with the value of base R.</i></font>
+<a name="footnote1"><sup>1</sup></a><font size="3"><i> Mind you, this is much more because of my own lack of formal training in programming than anything to do with the value of base R.</i></font>
 
 ## Getting Started
 
@@ -57,7 +57,7 @@ Now, two things to note before we get started:
 
 Onwards - let's start our discussion with some quick functions for describing our data frames.
 
-<a name="footnote2"><sup>2</sup></a><i> One [can apparently code a 'hack' pipe in Python](https://stackoverflow.com/questions/28252585/functional-pipes-in-python-like-from-dplyr) using the `infix` library, but I haven't done so myself and can't really comment on whether that's worth your time.</i>
+<a name="footnote2"><sup>2</sup></a><i><font size="3"> One [can apparently code a 'hack' pipe in Python](https://stackoverflow.com/questions/28252585/functional-pipes-in-python-like-from-dplyr) using the `infix` library, but I haven't done so myself and can't really comment on whether that's worth your time.</i></font>
 
 ### Looking at our data
 
