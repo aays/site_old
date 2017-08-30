@@ -53,7 +53,7 @@ iris = conversion.ri2py(R['iris'])
 
 Now, two things to note before we get started:
 1. Much like in `dplyr`, it appears a given operation on a `pandas` dataframe will _always_ return a new data frame object. That being said, multiple `pandas` functions do offer a boolean `inplace` argument if you'd like for an operation to modify an object as such. Frankly, I don't personally know enough about programming principles to know whether doing so is necessarily a better or worse approach - just go with whatever makes the code easiest to implement and read after the fact.
-2. As far as I know, `pandas` _has no pipe operator._ That's right. I know that's a huge part of the intuitiveness of `dplyr` gone off the bat. There _is_ a semi-equivalent in the form of the `.pipe()` method but we'll get into why that doesn't function in exactly the same way. The `pandas` cheat sheet does recommend 'method chaining` as an option, which I will do a bit of here, but which I personally find to be not particularly conducive to easy reading. <sup>[[2](#footnote2)]</sup>
+2. As far as I know, `pandas` _has no pipe operator._ That's right -- I know that's a huge part of the intuitiveness of `dplyr` gone off the bat. There _is_ a semi-equivalent in the form of the `.pipe()` method but we'll get into why that doesn't function in exactly the same way. The `pandas` cheat sheet does recommend 'method chaining` as an option, which I will do a bit of here, but which I personally find to be not particularly conducive to easy reading. <sup>[[2](#footnote2)]</sup>
 
 Onwards - let's start our discussion with some quick functions for describing our data frames.
 
@@ -61,7 +61,7 @@ Onwards - let's start our discussion with some quick functions for describing ou
 
 ### Looking at our data
 
-`head`, the timeless convenience function for peeking at the top of our data frame, remains largely unchanged across both languages. The only difference is that it's a _function_ in R and a _class method_ in Python. 
+`head` -- the timeless convenience function that lets us check up on the first few rows of our data frame -- remains largely unchanged across both languages. The only difference is that it's a _function_ in R and a _class method_ in Python. 
 
 R:
 ```r
