@@ -8,7 +8,7 @@ To be up front for a second here: I'm writing this post mostly for myself. I am 
 
 This post here is my attempt to make some sense out of `pandas` operations in light of my familiarity and comfort with the tidyverse, and `dplyr` in particular. I'm hoping that in explaining `pandas` within the context of some core `dplyr` verbs, it's perhaps even the tiniest bit easier for R users to wrap their heads around this nifty Python library. But remember: a little knowledge can go a long way!
 
-<a name="footnote1"><sup>1</sup></a><font size="10"><i> Mind you, this is much more because of my own lack of formal training in programming than anything to do with the value of base R.</i></font>
+<a name="footnote1"><sup>1</sup></a><font size="2"><i> Mind you, this is much more because of my own lack of formal training in programming than anything to do with the value of base R.</i></font>
 
 ## Getting Started
 
