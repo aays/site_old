@@ -21,14 +21,14 @@ This post here is my attempt to make some sense out of `pandas` operations in li
 
 # Getting Started
 
-Like any good data frame-related tutorial, I figured the classic `iris` dataset would be a good environment for us to explore `pandas` in. Loading it into R is simple enough, given that it's a built-in dataset. Let's also get `dplyr` up and running.
+Like any good data frame-related tutorial, I figured the classic `iris` dataset would be a good environment for us to explore `pandas` in. Loading it into R is simple enough, given that it's a built-in dataset. Let's also load `dplyr` into our workspace while we're at it.
 
 ```r
 library(dplyr)
 iris
 ```
 
-Getting `iris` is moderately trickier in Python. If you've got the `scikit-learn` library installed, it can be grabbed from there. Let's also import `pandas` -- by convention, it is often abbreviated as `pd`.
+Getting `iris` is moderately trickier in Python. If you've got the `scikit-learn` library installed, it can be grabbed from there. Let's also import `pandas` -- by convention, it is abbreviated as `pd` when importing.
 
 ```python
 import pandas as pd
@@ -53,11 +53,11 @@ iris = conversion.ri2py(R['iris'])
 
 Now, two things to note before we get started:
 1. Much like in `dplyr`, it appears a given operation on a `pandas` dataframe will _always_ return a new data frame object. That being said, multiple `pandas` functions do offer a boolean `inplace` argument if you'd like for an operation to modify an object as such. Frankly, I don't personally know enough about programming principles to know whether doing so is necessarily a better or worse approach - just go with whatever makes the code easiest to implement and read after the fact.
-2. As far as I know, `pandas` _has no pipe operator._ That's right -- I know that's a huge part of the intuition behind `dplyr` gone off the bat. There _is_ a semi-equivalent in the form of the `.pipe()` method, but we'll get into why that doesn't function in exactly the same way. The `pandas` cheat sheet does recommend 'method chaining` as an option, which I will demonstrate below. <sup>[[2](#footnote2)]</sup>
+2. As far as I know, `pandas` _has no pipe operator._ That's right -- I know that's a huge part of the intuition behind `dplyr` gone off the bat. There _is_ a semi-equivalent in the form of the `.pipe()` method, but we'll get into why that doesn't function in exactly the same way. In the meantime, the `pandas` cheat sheet does recommend 'method chaining` as an option, which I will demonstrate below. <sup>[[2](#footnote2)]</sup>
 
 Onwards - let's start our discussion with some quick functions for describing our data frames.
 
-<a name="footnote2"><sup>2</sup></a><font size="3"> <i>One can apparently <a href='https://stackoverflow.com/questions/28252585/functional-pipes-in-python-like-from-dplyr'>code a 'hack' pipe in Python</a> using the</i> `infix` <i>library, but I haven't done so myself and can't really comment on whether that's worth your time.</i></font>
+<a name="footnote2"><sup>2</sup></a><font size="3"> <i>One can apparently <a href='https://stackoverflow.com/questions/28252585/functional-pipes-in-python-like-from-dplyr'>code a 'hack' pipe in Python</a> using the</i> infix <i>library, but I haven't done so myself and can't really comment on whether that's worth your time.</i></font>
 
 # Looking at our data
 
@@ -140,7 +140,7 @@ filter(iris, Sepal.Length > 7)
 
 `pandas` provides two ways of doing this same operation.
 
-With the `.query()` method:
+First, with the `.query()` method:
 ```python
 iris.query('Sepal_Length > 7') # note how the query is a string
 
@@ -159,7 +159,7 @@ iris.query('Sepal_Length > 7') # note how the query is a string
 ## 136           7.7          3.0           6.1          2.3  virginica
 ```
 
-Or by using conditions within square brackets (quite like base R):
+Or second, by using conditions within square brackets (quite like base R):
 ```python
 iris[iris.Sepal_Length > 7]
 
@@ -366,6 +366,8 @@ Notice how we use `\` to continue code on new lines. As far as I know, this is t
 
 ---
 
-That's it for the first part here! In the second installment, I'll be going over how to use the `.pipe()` method (and why it's really not the best way to go a lot of the time...), `group_by`, `mutate`, `summarise`, and `sample_n`/`sample_frac`. 
+That's it for the first part here! In the second installment, I'll be going over how to use the `.pipe()` method (and why it's really not the best way to go a lot of the time...), and equivalents of `group_by`, `mutate`, `summarise`, and `sample_n`/`sample_frac`. 
 
-A potential third installment might go beyond that and cover things like `.iterrows()` and other `pandas`-specific tools, but that depends on how far my own understanding of `pandas` manages to grow. Till next time!
+A potential third installment might go beyond that and cover things like `.iterrows()` and other `pandas`-specific tools, but that depends on how far my own understanding of `pandas` manages to grow. 
+
+Till next time!
