@@ -21,14 +21,12 @@ body {
 	background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
-  margin: 0px; /* */
-  padding: 0px; /* */
 }
 
 .container {
   margin: 0 auto;
   max-width: 740px;
-  /* padding: 0 10px; */
+  padding: 0 10px;
   width: 100%;
 }
 
@@ -259,7 +257,7 @@ nav {
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
-    font-size: 18px; /* 22px */
+    font-size: 22px;
     font-style: italic;
   }
 
