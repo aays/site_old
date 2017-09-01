@@ -203,7 +203,7 @@ iris[iris$Sepal.Length > 7, ]
 
 You may have noticed how in the above example, the indices (on the left hand side) of the R data frame have been reset following our usage of `filter`, but those of the `pandas` one haven't (same goes for the base R operation, but that's another conversation entirely). This can be an unexpected source of frustration more often than you might think, especially if you're performing operations involving repeated subsetting and indexing of data frames. 
 
-To reset the index each time, simply tack on the `.reset_index()` method at the end of a `pandas` operation. Careful, however - doing so will create a new column, simply called `index`, which will store all of the 'old' indices. That's probably something to watch out for if you're selecting columns by position and not name! That can be avoided by setting `drop = True` in `reset_index()`.
+To reset the index each time, simply tack on the `.reset_index()` method at the end of a `pandas` operation. Careful, however - doing so will create a new column called `index`, which will store all of the 'old' indices. That's probably something to watch out for if you're selecting columns by position and not name! This can be avoided by setting `drop = True` in `reset_index()`.
 
 ```python
 iris.query('Sepal_Length > 7').reset_index()
