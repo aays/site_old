@@ -28,7 +28,7 @@ Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelut
 
 **Hasan A** (2016) France’s commitment to low-carbon strategies: a compliance assessment. In 2015 G7 Schloss Elmau Summit Final Compliance Report. Toronto: G8 Research Group. pp. 175-176. [Available online.](http://www.g8.utoronto.ca/evaluations/2015compliance-final/index.html)
 
-**Hasan A**, Chen A, Gupta N, Glowinsky R. (2016) The U.K.’s commitment to fostering growth via education: a compliance assessment. In 2015 G7 Schloss Elmau Summit Final Compliance Report. Toronto: G8 Research Group. pp. 16-17. [Available online](http://www.g8.utoronto.ca/evaluations/2015compliance-final/index.html).
+**Hasan A**, Chen A, Gupta N, Glowinsky R (2016) The U.K.’s commitment to fostering growth via education: a compliance assessment. In 2015 G7 Schloss Elmau Summit Final Compliance Report. Toronto: G8 Research Group. pp. 16-17. [Available online](http://www.g8.utoronto.ca/evaluations/2015compliance-final/index.html).
 
 ## Talks/Presentations
 
