@@ -16,7 +16,7 @@ _Thesis:_ Study of the endophytic bacterial and fungal communities inhabiting co
 _Supervisors:_ Prof. Keiko Yoshioka & Dr. Yaima Arocha Rosete
 
 ## Publications
-Morales-Lizcano NP, **Hasan A**, To H, Lekadou TT, Copeland J, Wang PW, Diallo HA, Konan Konan JL, Scott J, Yoshioka K, Moeder W, Arocha Rosete Y. (2017) Microbial diversity in leaves, trunk and rhizosphere of coconut palms (_Cocos nucifera_ L.) associated with the coconut lethal yellowing phytoplasma in Grand-Lahou, Côte d’Ivoire. _African Journal of Biotechnology_. 16(27), 1534-1550. doi:10.5897/AJB2017.16006. [Available online.](http://www.academicjournals.org/journal/AJB/article-abstract/BE373F465038)
+Morales-Lizcano NP, **Hasan A**, To H, Lekadou TT, Copeland J, Wang PW, Diallo HA, Konan Konan JL, Yoshioka K, Moeder W, Scott J, Arocha Rosete Y. (2017) Microbial diversity in leaves, trunk and rhizosphere of coconut palms (_Cocos nucifera_ L.) associated with the coconut lethal yellowing phytoplasma in Grand-Lahou, Côte d’Ivoire. _African Journal of Biotechnology_. 16(27), 1534-1550. doi:10.5897/AJB2017.16006. [Available online.](http://www.academicjournals.org/journal/AJB/article-abstract/BE373F465038)
 
 Arocha Rosete Y, Morales-Lizcano NP, **Hasan A**, Yoshioka K, Moeder W, Michelutti R, Satta E, Bertaccini A, Scott J. (2016) First report of the identification of a ‘Candidatus Phytoplasma pruni’-related strain in Trillium species in Canada. _New Disease Reports_, 34, 19. doi:10.5197/j.2044-0588.2016.034.019. [Available online.](https://www.ndrs.org.uk/article.php?id=034019#)
 
